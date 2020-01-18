@@ -119,7 +119,7 @@ describe("firstNamesAllCaps()", () => {
   });
 });
 
-xdescribe("getRunnersByTShirtSize()", () => {
+describe("getRunnersByTShirtSize()", () => {
   it("returns an array of runners of a given shirt size", () => {
     expect(getRunnersByTShirtSize(runners, 'S').every(r => r.shirt_size === 'S')).to.equal(true);
   });
@@ -161,7 +161,7 @@ describe("counterMaker()", () => {
   });
 });
 
-xdescribe("counterMakerWithLimit()", () => {
+describe("counterMakerWithLimit()", () => {
   const counter = counterMakerWithLimit(3)
   it("returns a function", () => {
     expect(isFunction(counter)).to.equal(true);
