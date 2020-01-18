@@ -221,7 +221,7 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 function getRunnersByTShirtSize(runners, tShirtSize) {
-  let tShirt = runners.filter((item) => tShirtSize.includes(item.shirt_size));
+  let tShirt = runners.filter( (runner)=> tShirtSize.includes(runner.shirt_size) )
   return tShirt;
 }
 
@@ -235,8 +235,11 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
 */
-function tallyUpDonations(/* CODE HERE */) {
-  /* CODE HERE */
+function tallyUpDonations(runners) {
+  let totalDonations = runners.reduce((accum, item) => {
+    return accum + item.donation;
+  }, 0);
+  return totalDonations;
 }
 
 /////////////// CLOSURES ///////////////
